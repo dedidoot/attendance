@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Gapara</string>
+
+    <string name="no_permissions_granted">We can not give you service without your permission</string>
+    <string name="permissions_dialog_title">We need your help</string>
+    <string name="accept_permissions_dialog">GIVE PERMISSIONS!</string>
+    <string name="cancel_dialog">Cancel</string>
+    <string name="on_development_progress">On Development Progress</string>
+    <string name="file_provider_authority" translatable="false">gapara.co.id</string>
+    <string name="default_notification_channel_id">gapara</string>
+    <string name="dash">-</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

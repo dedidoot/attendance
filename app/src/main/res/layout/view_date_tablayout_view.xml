@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tabLayoutView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_selector"
+    android:padding="@dimen/_4sdp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/Regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Fri"
+        android:textColor="@color/grey6"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descTextView"
+        style="@style/SemiBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="02"
+        android:textColor="@color/grey6"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

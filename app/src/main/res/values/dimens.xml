@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_dimen_64">64sp</dimen>
+    <dimen name="text_dimen_48">48sp</dimen>
+    <dimen name="text_dimen_32">32sp</dimen>
+    <dimen name="text_dimen_28">28sp</dimen>
+    <dimen name="text_dimen_24">24sp</dimen>
+    <dimen name="text_dimen_20">20sp</dimen>
+    <dimen name="text_dimen_18">18sp</dimen>
+    <dimen name="text_dimen_16">16sp</dimen>
+    <dimen name="text_dimen_14">14sp</dimen>
+    <dimen name="text_dimen_12">12sp</dimen>
+
+    <dimen name="text_line_height_80">80sp</dimen>
+    <dimen name="text_line_height_60">60sp</dimen>
+    <dimen name="text_line_height_40">40sp</dimen>
+    <dimen name="text_line_height_36">36sp</dimen>
+    <dimen name="text_line_height_32">32sp</dimen>
+    <dimen name="text_line_height_28">28sp</dimen>
+    <dimen name="text_line_height_26">26sp</dimen>
+    <dimen name="text_line_height_24">24sp</dimen>
+    <dimen name="text_line_height_19_5">19.5sp</dimen>
+    <dimen name="text_line_height_20">20sp</dimen>
+    <dimen name="text_line_height_9_75">9.75sp</dimen>
+    <dimen name="text_line_height_18">18sp</dimen>
+    <dimen name="text_line_height_16">16sp</dimen>
+    <dimen name="text_line_height_14">14sp</dimen>
+
+    <integer name="text_weight_900">900</integer>
+    <integer name="text_weight_700">700</integer>
+    <integer name="text_weight_600">600</integer>
+    <integer name="text_weight_400">400</integer>
+    <integer name="text_weight_500">500</integer>
+</resources>

@@ -1,0 +1,98 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="DialogDateTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TransparentDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CheckBoxStyle">
+        <item name="colorControlNormal">@color/bg_input</item>
+        <item name="colorControlActivated">@color/bg_input</item>
+    </style>
+
+    <style name="TextLabel" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+    <style name="Regular" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="fontWeight">@integer/text_weight_400</item>
+        <item name="android:lineSpacingExtra">@dimen/_2sdp</item>
+    </style>
+
+    <style name="Regular2" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="fontWeight">@integer/text_weight_500</item>
+        <item name="android:lineSpacingExtra">@dimen/_2sdp</item>
+    </style>
+
+    <style name="Regular3" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="fontWeight">@integer/text_weight_700</item>
+        <item name="android:lineSpacingExtra">@dimen/_2sdp</item>
+    </style>
+
+    <style name="Button1" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="fontWeight">@integer/text_weight_700</item>
+        <item name="android:lineSpacingExtra">@dimen/_2sdp</item>
+    </style>
+
+    <style name="SemiBold" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="fontWeight">@integer/text_weight_600</item>
+        <item name="android:lineSpacingExtra">@dimen/_2sdp</item>
+    </style>
+
+    <style name="Bold" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="fontWeight">@integer/text_weight_700</item>
+        <item name="android:lineSpacingExtra">@dimen/_2sdp</item>
+    </style>
+
+    <style name="Dialog1" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Dialog2" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+</resources>

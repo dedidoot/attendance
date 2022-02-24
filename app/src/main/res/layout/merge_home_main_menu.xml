@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="gapara.co.id.R" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/menu1View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/briefMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_white_brief}"
+                app:menuText="@{`Brief`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/initialMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_initial}"
+                app:menuText="@{`Initial`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/scheduleMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_schedule}"
+                app:menuText="@{`Schedule`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/announceMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_announce}"
+                app:menuText="@{`Announce`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/reportMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_initial}"
+                app:menuText="@{`Report`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/specialReportMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_initial}"
+                app:menuText="@{`Special\nReport`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/dropOffMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_white_drop_off}"
+                app:menuText="@{`Drop\nOff`}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu2View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/scheduleGuardMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_schedule}"
+                app:menuText="@{`Schedule`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/incidentMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_incident}"
+                app:menuText="@{`Incident`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/emergencyMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_emergency}"
+                app:menuText="@{`Incident\nReport`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/checkpointMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_checkpoint}"
+                app:menuText="@{`Check\npoint`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/createIntelReportMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_intel}"
+                app:menuText="@{`Create\nReport`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/listIntelReportMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_intel}"
+                app:menuText="@{`Report\nIntel`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/feedbackMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_white_feedback}"
+                app:menuText="@{`Feedback`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/liveAttendanceMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_initial}"
+                app:menuText="@{`Attendance`}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/createLostFoundMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_white_edit}"
+                app:menuText="@{`Lost\nFound`}" />
+
+            <gapara.co.id.feature.component.MainMenuView
+                android:id="@+id/logBookMenuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:visibility="gone"
+                app:menuIcon="@{R.drawable.ic_initial}"
+                app:menuText="@{`Log\nBook`}" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

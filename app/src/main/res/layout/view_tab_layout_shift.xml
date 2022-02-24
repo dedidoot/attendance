@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp"
+    android:background="@drawable/bg_primary_button">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/_14sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingRight="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:text="Shift 1"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp" />
+
+</FrameLayout>

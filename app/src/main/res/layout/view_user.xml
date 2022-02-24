@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/userView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_10sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/place_holder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_width="0dp"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        style="@style/Regular2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="02 Oct 2020"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImageView"
+        app:layout_constraintLeft_toRightOf="@+id/profileImageView"
+        app:layout_constraintRight_toLeftOf="@+id/rightImageView"
+        app:layout_constraintTop_toTopOf="@+id/profileImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rightImageView"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImageView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profileImageView"
+        app:srcCompat="@drawable/ic_grey_clock" />
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@color/grey7"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        style="@style/Regular2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="30m"
+        android:textColor="@color/grey7"
+        android:textSize="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@+id/profileImageView"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
+
+    <TextView
+        android:id="@+id/replyTextView"
+        style="@style/SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="?selectableItemBackground"
+        android:text="Reply"
+        android:textColor="@color/grey7"
+        android:textSize="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@+id/timeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

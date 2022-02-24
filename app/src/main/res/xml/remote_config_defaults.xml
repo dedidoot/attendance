@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <!--<entry>
+        <key>version_apps</key>
+        <value>2</value>
+    </entry>
+    <entry>
+        <key>is_force_update</key>
+        <value>true</value>
+    </entry>-->
+    <entry>
+        <key>quality_image_compress</key>
+        <value>50</value>
+    </entry>
+    <entry>
+        <key>is_show_lost_found_type</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>absent_category</key>
+        <value>{
+            "data": [
+            {
+            "id": "1",
+            "name": "Sakit"
+            },
+            {
+            "id": "2",
+            "name": "Urusan Keluarga"
+            }
+            ]
+            }</value>
+    </entry>
+    <entry>
+        <key>type_absent</key>
+        <value>{
+            "data": [
+            {
+            "id": "absent",
+            "name": "Absent"
+            },
+            {
+            "id": "sick",
+            "name": "Sick"
+            },
+            {
+            "id": "training",
+            "name": "Training"
+            },
+            {
+            "id": "leave-with-permission",
+            "name": "Leave with permission"
+            },
+            {
+            "id": "paid-leave",
+            "name": "Paid leave"
+            }
+            ]
+            }</value>
+    </entry>
+    <entry>
+        <key>lost_found_category</key>
+        <value>{
+            "data": [
+            {
+            "id": "1",
+            "name": "Found"
+            },
+            {
+            "id": "2",
+            "name": "Lost"
+            }
+            ]
+            }</value>
+    </entry>
+
+
+</defaultsMap>

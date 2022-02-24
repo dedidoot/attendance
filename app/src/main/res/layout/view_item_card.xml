@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundImageView"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_width="0dp"
+        app:riv_oval="true" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/roundImageView"
+        app:layout_constraintLeft_toRightOf="@+id/roundImageView"
+        app:layout_constraintRight_toLeftOf="@+id/textBarrier"
+        app:layout_constraintTop_toTopOf="@+id/roundImageView">
+
+        <TextView
+            android:id="@+id/roundTextView"
+            style="@style/Regular2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="02 Oct 2020"
+            android:textColor="@color/blue2"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/round2TextView"
+            style="@style/Regular2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="02 Oct 2020"
+            android:textColor="@color/grey7"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/textBarrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="right2Button,right1ImageView,right2ImageView,right3ImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/right1ImageView"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/roundImageView"
+        app:layout_constraintRight_toLeftOf="@+id/right2ImageView"
+        app:layout_constraintTop_toTopOf="@+id/roundImageView"
+        app:srcCompat="@drawable/ic_green_checklist" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/right2ImageView"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/roundImageView"
+        app:layout_constraintRight_toLeftOf="@+id/right3ImageView"
+        app:layout_constraintTop_toTopOf="@+id/roundImageView"
+        app:srcCompat="@drawable/ic_green_checklist" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/right3ImageView"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/roundImageView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/roundImageView"
+        app:srcCompat="@drawable/ic_green_checklist" />
+
+    <Button
+        android:id="@+id/right2Button"
+        style="@style/Button1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_green_button"
+        android:letterSpacing="0.1"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:text="Check"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/roundImageView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/roundImageView" />
+
+    <Button
+        android:id="@+id/leftButton"
+        style="@style/Button1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_blue_button"
+        android:letterSpacing="0.1"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:text="Accept"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintRight_toLeftOf="@+id/middleGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/roundImageView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middleGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/rightButton"
+        style="@style/Button1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_blue_button"
+        android:letterSpacing="0.1"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:text="Accept"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintLeft_toRightOf="@+id/middleGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/roundImageView" />
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/grey9"
+        app:layout_constraintTop_toBottomOf="@+id/leftButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

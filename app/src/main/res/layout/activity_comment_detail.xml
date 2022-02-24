@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="gapara.co.id.feature.incident.CommentDetailActivity" />
+
+        <variable
+            name="viewModel"
+            type="gapara.co.id.feature.incident.IncidentViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_height="match_parent">
+
+        <gapara.co.id.feature.component.AppBarView
+            android:id="@+id/detailAppBarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/commentView"
+            app:layout_constraintTop_toBottomOf="@+id/detailAppBarView">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/userCommentView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </ScrollView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/commentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                app:riv_border_width="0dp"
+                app:riv_oval="true" />
+
+            <gapara.co.id.feature.component.InputView
+                android:id="@+id/commentInputView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:afterTextChanged="@{(text) -> activity.onTextCommentChanged(text)}"
+                app:inputText="@={viewModel.commentText}" />
+
+            <TextView
+                android:id="@+id/sendTextView"
+                style="@style/Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackground"
+                android:gravity="center_vertical"
+                android:onClick="@{ () -> activity.onSendComment() }"
+                android:text="Send"
+                android:textColor="@color/grey1"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            app:isVisible="@{viewModel.isLoading()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

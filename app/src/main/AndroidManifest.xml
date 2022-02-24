@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="gapara.co.id">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".core.base.BaseApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_logo"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".feature.map.MapsActivity"
+            android:screenOrientation="portrait"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".feature.splash.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/file_provider_authority"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+        <service
+            android:name=".core.base.FCMService"
+            android:exported="false"
+            android:stopWithTask="false">
+            <intent-filter android:priority="1">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".core.base.notification.NotificationReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartservice" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".core.base.notification.NotificationService"
+            android:enabled="true" />
+        <service
+            android:name=".core.base.notification.OnClearFromRecentService"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".core.base.CustomWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.home.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.brief.BriefHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.brief.BriefDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.brief.CreateBriefActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.announcement.AnnouncementHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.announcement.AnnouncementDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.announcement.CreateAnnouncementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.schedule.ScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.incident.IncidentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.incident.CreateIncidentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.incident.IncidentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.incident.CommentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.emergency.EmergencyReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.emergency.EmergencyDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.emergency.CreateEmergencyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.feedback.FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.feedback.CreateFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.feedback.FeedbackDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.report.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.report.ReportDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.report.CreateReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.initial.InitialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.initial.CreateInitialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.initial.InitialDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".core.base.DisplayImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.checkpoint.LocationCheckPointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.checkpoint.CheckPointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.checkpoint.CheckPointDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.checkpoint.CreateCheckPointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.special_report.CreateSpecialReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.special_report.SpecialReportDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.special_report.SpecialReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.lost_found.CreateLostFoundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.log_book.CreateLogBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.liveattendance.LiveAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.checkpoint.LocationCheckPointDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.intel.IntelReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.intel.IntelListReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feature.incident.AddNewsActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

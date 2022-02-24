@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="gapara.co.id.feature.login.LoginActivity" />
+
+        <variable
+            name="viewModel"
+            type="gapara.co.id.feature.login.LoginViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:src="@drawable/ic_logo" />
+
+            <gapara.co.id.feature.component.InputView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                app:inputText="@={viewModel.username}" />
+
+            <gapara.co.id.feature.component.InputView
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                app:inputText="@={viewModel.password}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/signAsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="?selectableItemBackground"
+                android:fontFamily="@font/font_regular"
+                android:onClick="@{ () -> activity.onForgotPassword() }"
+                android:text="Lupa Password?"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <Button
+                style="@style/Button1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:background="@drawable/bg_primary_button"
+                android:letterSpacing="0.1"
+                android:onClick="@{ () -> activity.onLogin() }"
+                android:text="login"
+                android:textColor="@color/white"
+                app:isVisible="@{!viewModel.isLoading}" />
+
+            <TextView
+                style="@style/SemiBold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:onClick="@{ () -> activity.onFeedback() }"
+                android:textColor="@color/grey7"
+                android:text="Feedback"
+                app:isVisible="@{!viewModel.isLoading}"
+                android:textSize="@dimen/_10sdp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:indeterminateTint="@color/colorPrimaryDark"
+                app:isVisible="@{viewModel.isLoading}" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
